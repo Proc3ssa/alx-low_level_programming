@@ -1,0 +1,2 @@
+#!/bin/bash
+CFILE="main.c"; OUTPUT_FILE="${CFILE%.c}.s"; gcc -S -masm=intel "$CFILE" -o "$OUTPUT_FILE" && echo "Assembly code generated and saved in $OUTPUT_FILE" || echo "Error generating the assembly code."
