@@ -9,8 +9,6 @@ int main(void)
         for (j = 0; j < 10; j++)
         {
             putchar(i + '0');
-            putchar(',');
-            putchar(' ');
             putchar(j + '0');
 
             if (!(i == 9 && j == 9))
@@ -21,7 +19,7 @@ int main(void)
         }
     }
 
-    putchar('\n');
 
-    return (0);
+    return 0;
 }
+
