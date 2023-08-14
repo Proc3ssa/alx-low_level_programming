@@ -1,3 +1,2 @@
 #!/bin/bash
-#!/bin/bash
 CFILE="main.c"; BASENAME=$(basename -s .c "$CFILE"); gcc -c "$CFILE" -o "$BASENAME.o"
