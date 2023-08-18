@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 void print_times_table(int n) {
+    int i;
+
     if (n < 0 || n > 15) {
-        return; // Don't print anything if n is out of range
+        return; 
     }
 
-    int i = 0;
-    while (i <= 10) {
-        printf("%2d x %2d = %2d\n", n, i, n * i);
-        i++;
+    for (i = 0; i <= 10; i++) {
+        printf("%d x %d = %d\n", n, i, n * i);
     }
 }
 
