@@ -1,45 +1,23 @@
-#include "main.h"
+#include <stdio.h>
 
-void print_times_table(int n)
-{
-	if (n < 0 || n > 15)
-		return;
+void print_times_table(int n) {
+    if (n < 0 || n > 15) {
+        return; // Don't print anything if n is out of range
+    }
 
-	for (int i = 0; i <= n; i++)
-	{
-		for (int j = 0; j <= n; j++)
-		{
-			int result = i * j;
+    int i = 0;
+    while (i <= 10) {
+        printf("%2d x %2d = %2d\n", n, i, n * i);
+        i++;
+    }
+}
 
-			if (j != 0)
-			{
-				_putchar(' ');
-				if (result < 100)
-					_putchar(' ');
-				if (result < 10)
-					_putchar(' ');
-			}
+int main() {
+    int n;
+    printf("Enter a number between 0 and 15: ");
+    scanf("%d", &n);
 
-			if (result < 10)
-				_putchar(result + '0');
-			else if (result < 100)
-			{
-				_putchar(result / 10 + '0');
-				_putchar(result % 10 + '0');
-			}
-			else
-			{
-				_putchar(result / 100 + '0');
-				_putchar((result / 10) % 10 + '0');
-				_putchar(result % 10 + '0');
-			}
+    print_times_table(n);
 
-			if (j != n)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-		}
-		_putchar('\n');
-	}
+    return 0;
 }
