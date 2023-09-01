@@ -1,6 +1,6 @@
-#include "main.h"
-#include<stdio.h>
-void _puts(char *str)
+#include <stdio.h>  // Include the standard input/output library header
+
+void _puts(char *str);  // Declare the _puts function before using it
 
 /**
  * main - Entry point
@@ -9,6 +9,17 @@ void _puts(char *str)
  */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+    _puts("\"Programming is like building a multilingual puzzle");  // Call _puts function
+    return (0);
+}
+
+// Define the _puts function
+void _puts(char *str)
+{
+    while (*str != '\0')
+    {
+        putchar(*str);  // Output each character
+        str++;
+    }
+    putchar('\n');  // Output a newline character after the string
 }
