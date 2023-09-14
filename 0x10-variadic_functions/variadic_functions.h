@@ -1,5 +1,3 @@
-variadic_functions.h
-
 #ifndef _VARIADIC_H_
 #define _VARIADIC_H_
 
