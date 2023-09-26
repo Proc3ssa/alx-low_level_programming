@@ -1,4 +1,3 @@
-1-main.c 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -30,4 +29,4 @@ int main(void)
     printf("-> %lu elements\n", n);
     free(new);
     return (0);
-#
+}
